@@ -16,6 +16,10 @@
 		<folder>js</folder>
 	</files>
 	<positions>
-		<position></position>
+		<position>header</position>
+		<position>above-content</position>
+		<position>sidebar</position>
+		<position>below-content</position>
+		<position>footer</position>
 	</positions>
 </extension>

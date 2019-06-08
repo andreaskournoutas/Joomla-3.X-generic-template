@@ -10,7 +10,4 @@
 defined('_JEXEC') or die;
 ?>
 
-
-<div class="wrapper">
-	<?php echo $module->content;?>
-</div>
+<?php echo $module->content;?>

@@ -10,13 +10,10 @@
 defined('_JEXEC') or die;
 ?>
 
-
-<div class="wrapper">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<?php echo $module->content;?>
-			</div>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<?php echo $module->content;?>
 		</div>
 	</div>
 </div>
