@@ -21,5 +21,6 @@
 		<position>sidebar</position>
 		<position>below-content</position>
 		<position>footer</position>
+		<position>off-canvas</position>
 	</positions>
 </extension>
