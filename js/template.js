@@ -1,19 +1,21 @@
+jQuery.noConflict();
+
 var deviceTier, deviceOrientation;
 
 function tierAndOrientation() {
-  	if ($(".visible-xl").css('display') == 'block') {
+  	if (jQuery(".visible-xl").css('display') == 'block') {
 		deviceTier = "xl";
 	}
-	else if ($(".visible-lg").css('display') == 'block') {
+	else if (jQuery(".visible-lg").css('display') == 'block') {
 		deviceTier = "lg";
 	}
-	else if ($(".visible-md").css('display') == 'block') {
+	else if (jQuery(".visible-md").css('display') == 'block') {
 		deviceTier = "md";
 	}
-	else if ($(".visible-sm").css('display') == 'block') {
+	else if (jQuery(".visible-sm").css('display') == 'block') {
 		deviceTier = "sm";
 	}
-	else if ($(".visible-xs").css('display') == 'block') {
+	else if (jQuery(".visible-xs").css('display') == 'block') {
 		deviceTier = "xs";
 	}
 	if (window.innerHeight >= window.innerWidth) {
@@ -22,21 +24,21 @@ function tierAndOrientation() {
 	else {
 		deviceOrientation = "landscape";
 	}
-	$("body").removeClass('xl lg md sm xs portrait landscape').addClass(deviceTier).addClass(deviceOrientation);
+	jQuery("body").removeClass('xl lg md sm xs portrait landscape').addClass(deviceTier).addClass(deviceOrientation);
 }
 
-$(function() {
+jQuery(function() {
 	tierAndOrientation();
 });
 
-$(window).on("load", function (e) {
+jQuery(window).on("load", function (e) {
 	
 });
 
-$(window).resize(function() {
+jQuery(window).resize(function() {
 	tierAndOrientation();
 });
 
-$(window).scroll(function() {
+jQuery(window).scroll(function() {
 
 });
