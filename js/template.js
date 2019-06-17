@@ -18,10 +18,10 @@ function tierAndOrientation() {
 	else if (jQuery(".visible-xs").css('display') == 'block') {
 		deviceTier = "xs";
 	}
-	if ((window.screen.orientation.angle == 0) || (window.screen.orientation.angle == 180)) {
+	if (window.innerHeight >= window.innerWidth) {
 		deviceOrientation = "portrait";
 	}
-	else if ((window.screen.orientation.angle == 90) || (window.screen.orientation.angle == 270)) {
+	else {
 		deviceOrientation = "landscape";
 	}
 	jQuery("body").removeClass('xl lg md sm xs portrait landscape').addClass(deviceTier).addClass(deviceOrientation);
