@@ -10,10 +10,7 @@
 	$input = JFactory::getApplication()->input;
 	$view = $input->get('view');
 	//***************************************
-	/*jimport('joomla.language.helper');
-    $languages = JLanguageHelper::getLanguages('lang_code');
-    $lang_code = JFactory::getLanguage()->getTag();
-    $sef = $languages[$lang_code]->sef;*/
+	$lang = explode("-", $this->language); 
 	//***************************************
 	$class = $pageclass ? htmlspecialchars($pageclass): "default";
 	$class .= " " . $view;
@@ -23,7 +20,7 @@
 	unset($this->_scripts['/media/jui/js/jquery-migrate.min.js']);
 ?>
 <!DOCTYPE html>
-<html lang="el" dir="<?php echo $this->direction; ?>">
+<html lang="<?php echo $lang[0]; ?>" dir="<?php echo $this->direction; ?>">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
