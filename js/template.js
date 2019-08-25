@@ -27,16 +27,31 @@ function tierAndOrientation() {
 	jQuery("body").removeClass('xl lg md sm xs portrait landscape').addClass(deviceTier).addClass(deviceOrientation);
 }
 
+function img4x3() {
+	jQuery(".img-4x3").css('object-fit', 'cover').each(function() {
+		jQuery(this).height((jQuery(this).width() * 3) / 4);
+	});
+}
+
+function img16x9() {
+	jQuery(".img-16x9").css('object-fit', 'cover').each(function() {
+		jQuery(this).height((jQuery(this).width() * 9) / 16);
+	});
+}
+
 jQuery(function() {
 	tierAndOrientation();
 });
 
 jQuery(window).on("load", function (e) {
-	
+	img4x3();
+	img16x9();
 });
 
 jQuery(window).resize(function() {
 	tierAndOrientation();
+	img4x3();
+	img16x9();
 });
 
 jQuery(window).scroll(function() {

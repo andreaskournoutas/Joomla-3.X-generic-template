@@ -39,26 +39,26 @@
 		<header>
 			<jdoc:include type="modules" name="header" style="xhtml"/>
 		</header>
-		<main>			
+		<div>			
 			<jdoc:include type="modules" name="above-content" style="xhtml"/>
 			<?php if ($this->countModules('sidebar')): ?>
 				<?php if ($pageclass != ""): ?>
-					<div>
+					<main>
 						<jdoc:include type="component"/>
-					</div>
+					</main>
 					<aside>
 						<jdoc:include type="modules" name="sidebar" style="xhtml"/>
 					</aside>
 				<?php endif; ?>
 			<?php else: ?>
 				<?php if ($pageclass != ""): ?>
-					<div>
+					<main>
 						<jdoc:include type="component"/>
-					</div>
+					</main>
 				<?php endif; ?>
 			<?php endif; ?>
 			<jdoc:include type="modules" name="below-content" style="xhtml"/>
-		</main>
+		</div>
 		<footer>
 			<jdoc:include type="modules" name="footer" style="xhtml"/>
 		</footer>
